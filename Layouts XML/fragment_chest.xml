@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141f23"
+    tools:context=".ChestFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/inputMessage"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Type Here"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#5a6b72"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:background="@drawable/combined_input_border"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="start|center"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTintMode="src_over"
+            android:text="Confirm"
+            android:gravity="center"
+            android:textColor="#142329"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn2"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ✅ Make Chatbot Response Scrollable -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/chatResponse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Chatbot response will appear here"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:scrollbars="vertical"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>

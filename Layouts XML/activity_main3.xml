@@ -1,0 +1,176 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141f23"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Back"
+        android:src="@drawable/arrow" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backArrow"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="-29dp"
+        android:text="Enter your details"
+        android:textColor="#516269"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/inputsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/combined_input_border"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/usernameInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Username or email"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:background="@null"
+            android:textColorHint="#5a6b72"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#394750" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <EditText
+                android:id="@+id/passwordInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="50dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColorHint="#5a6b72"/>
+
+            <ImageView
+                android:id="@+id/passwordToggle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/vision"
+                android:contentDescription="Toggle Password" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/inputsContainer"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn3"
+        android:text="SIGN IN"
+        android:textColor="#54656d"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signInButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="#141f23"
+        android:text="FORGOT PASSWORD"
+        android:textColor="#57b5df"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/socialButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/facebookButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn1"
+            android:text="FACEBOOK"
+            android:textColor="#0573eb"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/facebook_scaled"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/googleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn1"
+            android:text="GOOGLE"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/google_scaled"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:padding="12dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/termsAndPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/socialButtonsLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="-113dp"
+        android:gravity="center"
+        android:text="By signing in to Duolingo, you agree to our Terms and Privacy Policy."
+        android:textColor="#546167"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+</RelativeLayout>
